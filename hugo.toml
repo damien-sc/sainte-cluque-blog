@@ -3,7 +3,8 @@ languageCode = "fr-FR"
 title = "Saintecluque's Blog"
 theme = "sainte-cluque"
 
-paginate = 12
+[pagination]
+pagerSize = 12
 summaryLength = 30
 
 [params]
@@ -33,7 +34,7 @@ summaryLength = 30
   category = "categories"
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS"]
 
 [markup]
   [markup.goldmark]
