@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: damien-sc/sainte-cluque-blog
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+locale: "fr"
+
+collections:
+  - name: "posts"
+    label: "Articles"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Slug", name: "slug", widget: "string", required: false }
+      - { label: "Catégories", name: "categories", widget: "list", required: false }
+      - { label: "Brouillon", name: "draft", widget: "boolean", default: false }
+      - { label: "Contenu", name: "body", widget: "markdown" }

@@ -1,0 +1,51 @@
+baseURL = "https://sainte-cluque.com/"
+languageCode = "fr-FR"
+title = "Saintecluque's Blog"
+theme = "PaperMod"
+
+[params]
+  description = "Notre family blog"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  ShowFullTextinRSS = true
+  
+  [params.homeInfoParams]
+    Title = "Bienvenue chez les Sainte-Cluque 🏠"
+    Content = "Notre family blog — Londres et au-delà, depuis 2009."
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:"
+
+[menu]
+  [[menu.main]]
+    name = "Accueil"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Articles"
+    url = "/posts/"
+    weight = 5
+  [[menu.main]]
+    name = "Catégories"
+    url = "/categories/"
+    weight = 10
+  [[menu.main]]
+    name = "Archives"
+    url = "/archives/"
+    weight = 15
+
+[taxonomies]
+  category = "categories"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
