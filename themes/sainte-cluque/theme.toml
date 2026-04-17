@@ -1,0 +1,11 @@
+name = "Sainte-Cluque"
+license = "MIT"
+licenselink = ""
+description = "A warm, family-friendly Hugo theme for the Sainte-Cluque family blog"
+homepage = ""
+tags = ["blog", "family", "responsive", "french"]
+features = ["responsive", "dark-mode", "google-fonts"]
+min_version = "0.80.0"
+
+[author]
+  name = "Sainte-Cluque"

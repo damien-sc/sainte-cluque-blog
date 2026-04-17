@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<section class="list-hero">
+  <div class="section-container">
+    <h1 class="list-title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="list-description">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+<section class="list-section">
+  <div class="section-container">
+    <div class="post-grid">
+      {{ range .Pages }}
+        {{ if eq .Kind "page" }}
+          {{ partial "post-card.html" . }}
+        {{ else }}
+          <!-- Taxonomy term card -->
+          <a href="{{ .RelPermalink }}" class="taxonomy-card">
+            <h3 class="taxonomy-title">{{ .Title }}</h3>
+            <span class="taxonomy-count">{{ len .Pages }} article{{ if gt (len .Pages) 1 }}s{{ end }}</span>
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</section>
+
+{{ end }}
