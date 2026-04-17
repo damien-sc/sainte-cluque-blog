@@ -2,6 +2,7 @@ backend:
   name: github
   repo: damien-sc/sainte-cluque-blog
   branch: main
+  base_url: https://dreamy-puffpuff-71f137.netlify.app
 
 media_folder: "static/images"
 public_folder: "/images"
